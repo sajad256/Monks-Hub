@@ -1,0 +1,68 @@
+import imges from "../../assets/CardsIMG/CardsIMGJS";
+
+export const cardsDATA = [
+  {
+    title: "Sajad Danish",
+    job: "React Developer",
+    figma: "Figma",
+    wordpress: "Wordpress",
+    notion: "Notion",
+    img: imges.img1,
+  },
+  {
+    title: "Tahseen Safi",
+    job: "Front-End",
+    figma: "Figma",
+    wordpress: "Wordpress",
+    notion: "Notion",
+    img: imges.img2,
+  },
+  {
+    title: "Khitabullah Omarzai",
+    job: "Back-End",
+    figma: "Figma",
+    wordpress: "Wordpress",
+    notion: "Notion",
+    img: imges.img3,
+  },
+  {
+    title: "Ferdous Sharifi",
+    job: "Full-Stack",
+    figma: "Figma",
+    wordpress: "Wordpress",
+    notion: "Notion",
+    img: imges.img4,
+  },
+  {
+    title: "Abdullah Safi",
+    job: "Digital Manager",
+    figma: "Figma",
+    wordpress: "Wordpress",
+    notion: "Notion",
+    img: imges.img5,
+  },
+  {
+    title: "Raheb Khan",
+    job: "Project Manager",
+    figma: "Figma",
+    wordpress: "Wordpress",
+    notion: "Notion",
+    img: imges.img6,
+  },
+  {
+    title: "Jahanziab Safi",
+    job: "Front-End",
+    figma: "Figma",
+    wordpress: "Wordpress",
+    notion: "Notion",
+    img: imges.img1,
+  },
+  {
+    title: "Said Shah Ahmadi",
+    job: "Web Developer",
+    figma: "Figma",
+    wordpress: "Wordpress",
+    notion: "Notion",
+    img: imges.img2,
+  },
+];

@@ -1,0 +1,51 @@
+// GraduateKeyTakeaways.jsx
+import React from "react";
+import { cardsData } from "./GraduateKeyTakeawaysDATA";
+import { IoMdPlay } from "react-icons/io";
+;
+
+export default function GraduateKeyTakeaways() {
+  return (
+    <div className="mt-20">
+      {/* Information */}
+      <div className="info">
+        <h1 className="text-center text-4xl container font-bold leading-snug">
+          Key Takeaways from Successful Graduate Experiences
+        </h1>
+      </div>
+
+      {/* Main for Cards */}
+      <div className="flex flex-wrap gap-6 justify-center mt-10">
+        {cardsData.map((data, index) => (
+          <div
+            key={index}
+            className="w-72 h-96 rounded-lg shadow-lg overflow-hidden"
+          >
+            {/* Image + overlay container */}
+            <div className="w-full h-full flex flex-col justify-end relative">
+              <img
+                src={data.img}
+                alt={data.title}
+                className="w-full h-full object-cover"
+              />
+
+              {/* Overlay on top of image */}
+              <div className="absolute bottom-0 w-full bg-black bg-opacity-50 text-white p-4 flex justify-between items-center">
+                {/* Left side: text */}
+                <div className="flex flex-col">
+                  <h2 className="text-xl font-bold">{data.title}</h2>
+                  <p className="text-sm">{data.job}</p>
+                </div>
+
+                {/* Right side: icon */}
+                <div className="text-2xl border py-3  px-3 rounded-full bg-white text-black">
+                  <IoMdPlay />
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

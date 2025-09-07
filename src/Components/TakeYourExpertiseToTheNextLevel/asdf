@@ -1,0 +1,46 @@
+import React from "react";
+import { cardsDATA } from "./TakeYourExpertiseToTheNextLevelDATA";
+import { IoPerson } from "react-icons/io5";
+import { GiGraduateCap } from "react-icons/gi";
+import { BsGraphUp } from "react-icons/bs";
+
+export default function Cards() {
+  return (
+    <>
+      <div className="info text-center container mt-10">
+        <h1 className="text-4xl leading-snug font-bold">
+          Take Your Experise to the Next Level
+        </h1>
+      </div>
+      {/* Main for Cards */}
+      <div className="Main">
+        <div className="card-1 container md:flex md:flex-col md:justify-center md:items-center md:mt-8">
+          {cardsDATA.map((data, index) => {
+            return (
+              <>
+                <div className="border mt-2 rounded-xl py-2">
+                  <div className=" container p-3 mt-2 flex justify-start items-center">
+                    <div className="border rounded-full p-3 flex items-center justify-center">
+                      {index === 0 && <IoPerson size={20} />}
+                      {index === 1 && <GiGraduateCap size={20} />}
+                      {index === 2 && <BsGraphUp size={20} />}
+                    </div>
+                  </div>
+                  <div className="info-of-card container">
+                    <h1 className="font-bold text-2xl">{data.title}</h1>
+                    <p
+                      className="mt-2
+                    "
+                    >
+                      {data.detail}
+                    </p>
+                  </div>
+                </div>
+              </>
+            );
+          })}
+        </div>
+      </div>
+    </>
+  );
+}
