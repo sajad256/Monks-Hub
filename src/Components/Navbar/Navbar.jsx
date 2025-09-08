@@ -133,7 +133,7 @@ export default function Navbar() {
                 {data.homev3}
               </li>
               <li className="hover:text-[#EA4C89] cursor-pointer">
-                {data.course}
+                <Link to="/courses">{data.course}</Link>
               </li>
               <li className="hover:text-[#EA4C89] cursor-pointer">
                 {data.mentors}
