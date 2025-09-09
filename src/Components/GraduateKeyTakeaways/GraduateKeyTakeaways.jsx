@@ -20,22 +20,6 @@ export default function GraduateKeyTakeaways() {
         Key Takeaways from Successful Graduate Experiences
       </h1>
 
-      {/* Custom navigation buttons */}
-      <div className="flex container gap-3 lg:justify-between mb-6">
-        <button
-          ref={prevRef}
-          className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 transition"
-        >
-          <FaArrowLeft />
-        </button>
-        <button
-          ref={nextRef}
-          className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 transition"
-        >
-          <FaArrowRight />
-        </button>
-      </div>
-
       {/* Swiper Slider */}
       <div className="px-4">
         <Swiper
@@ -87,6 +71,22 @@ export default function GraduateKeyTakeaways() {
             </SwiperSlide>
           ))}
         </Swiper>
+
+        {/* Custom navigation buttons */}
+        <div className="flex container gap-3 lg:justify-center mt-5">
+          <button
+            ref={prevRef}
+            className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 transition"
+          >
+            <FaArrowLeft />
+          </button>
+          <button
+            ref={nextRef}
+            className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 transition"
+          >
+            <FaArrowRight />
+          </button>
+        </div>
 
         {/* Custom pagination container outside the Swiper */}
         <div ref={paginationRef} className="mt-6 flex justify-center"></div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaArrowRight } from "react-icons/fa6";
+import { TfiArrowTopRight } from "react-icons/tfi";
 import { cardsDATA } from "./CareerHeroDATA";
 
 export default function CareerHero() {
@@ -14,7 +14,7 @@ export default function CareerHero() {
           <button className="flex items-center gap-3  border px-3 py-2 rounded-full lg:w-52 bg-[#009D77] text-white font-bold">
             View All Blogs
             <span className="mt-1 border px-2 py-2 rounded-full text-black bg-white">
-              <FaArrowRight size={17} />
+              <TfiArrowTopRight size={17} />
             </span>
           </button>
         </div>

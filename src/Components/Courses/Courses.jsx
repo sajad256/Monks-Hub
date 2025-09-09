@@ -25,7 +25,7 @@ export default function Courses() {
       <Navbar />
 
       <div className="main mt-16">
-        <div className="home-courses text-center container ">
+        <div className="home-courses text-center container">
           <p className="lg:text-left lg:ms-32">Home / Courses</p>
           <div className=" lg:w-10/12 mt-2">
             <h1 className="font-bold text-4xl leading-snug lg:text-left lg:ms-32 lg:text-5xl">

@@ -3,6 +3,7 @@ import { cardsData } from "./JobMarketSectionDATA";
 import { IoTimeOutline } from "react-icons/io5";
 import { TiDocumentText } from "react-icons/ti";
 import { FaArrowRight } from "react-icons/fa6";
+import { TfiArrowTopRight } from "react-icons/tfi";
 
 export default function Cards() {
   return (
@@ -126,7 +127,7 @@ export default function Cards() {
         >
           View All Courses
           <span className="flex items-center justify-center border border-white w-8 h-8 rounded-full bg-white text-black ">
-            <FaArrowRight size={17} />
+           <TfiArrowTopRight />
           </span>
         </button>
       </div>

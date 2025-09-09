@@ -1,6 +1,6 @@
 import { cardsDATA } from "./MentorsCardsDATA";
 import { useState, useEffect } from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { TfiArrowTopRight } from "react-icons/tfi";
 
 export default function MentorsCards() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -77,7 +77,7 @@ export default function MentorsCards() {
         <button className="flex items-center gap-3 border px-3 py-2 rounded-full bg-[#009D77] text-white font-bold">
           Views All Mentors
           <span className="mt-1 border px-2 py-2 rounded-full text-black bg-white">
-            <FaArrowRightLong />
+            <TfiArrowTopRight />
           </span>
         </button>
       </div>

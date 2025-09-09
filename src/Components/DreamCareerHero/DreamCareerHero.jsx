@@ -1,5 +1,7 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
+import { TfiArrowTopRight } from "react-icons/tfi";
+
 export default function DreamCareerHero() {
   return (
     <>
@@ -25,10 +27,10 @@ export default function DreamCareerHero() {
               />
             </div>
             <div className="flex mt-3">
-              <button className="flex items-center justify-between w-64 border px-2 py-1 rounded-full bg-[#009D77] text-white font-bold md:w-72 lg:w-40 lg:mt-2 xl:mt-2">
+              <button className="flex items-center hover: hover:bg-black hover:transition-transform duration-500 ease-in-out cursor-pointer justify-between w-64 border px-2 py-1 rounded-full bg-[#009D77] text-white font-bold md:w-72 lg:w-40 lg:mt-2 xl:mt-2">
                 Join With Us
                 <span className="mt-1 border px-2 py-2 rounded-full text-black bg-white">
-                  <FaArrowRight size={17} />
+                  <TfiArrowTopRight className="" size={17} />
                 </span>
               </button>
             </div>

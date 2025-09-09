@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../../assets/NavbarIMG/logo.svg";
 import menu from "../../assets/NavbarIMG/menu.png";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { FaArrowRight, FaTimes } from "react-icons/fa";
+import { TfiArrowTopRight } from "react-icons/tfi";
 import { NavbarData } from "./NavbarDATA";
 import { Link } from "react-router";
 import { NavLink } from "react-router-dom";
@@ -68,7 +68,7 @@ export default function Navbar() {
                 </li>
 
                 <li className=" cursor-pointer hover:text-[#EA4C89]">
-                  {data.mentors}
+                  <Link to="/mentor"> {data.mentors}</Link>
                 </li>
                 <li className=" cursor-pointer hover:text-[#EA4C89]">
                   {data.blog}
@@ -90,7 +90,7 @@ export default function Navbar() {
             <button className="flex gap-3 items-center font-bold">
               Get this template
               <span className="bg-black rounded-full px-2 py-2">
-                <FaArrowRight className="text-white" />
+                <TfiArrowTopRight className="text-white" />
               </span>
             </button>
           </div>
@@ -124,7 +124,7 @@ export default function Navbar() {
               className="flex flex-col container ms-3 gap-3 mt-3 font-bold"
             >
               <li className="hover:text-[#EA4C89] cursor-pointer text-[#EA4C89]">
-                {data.home}
+                <Link to="/"> {data.home}</Link>
               </li>
               <li className="hover:text-[#EA4C89] cursor-pointer">
                 {data.homev2}
@@ -136,7 +136,7 @@ export default function Navbar() {
                 <Link to="/courses">{data.course}</Link>
               </li>
               <li className="hover:text-[#EA4C89] cursor-pointer">
-                {data.mentors}
+                <Link to="/mentor"> {data.mentors}</Link>
               </li>
               <li className="hover:text-[#EA4C89] cursor-pointer">
                 {data.blog}
