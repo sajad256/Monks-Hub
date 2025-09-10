@@ -7,6 +7,7 @@ import { NavbarData } from "./NavbarDATA";
 import { Link } from "react-router";
 import { NavLink } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
+import { CgArrowTopRight } from "react-icons/cg";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -88,10 +89,10 @@ export default function Navbar() {
         {/* CTA Button + Menu Icon */}
         <div className="flex items-center gap-3">
           <div className="btn hidden lg:flex border-2 border-black rounded-full px-3 py-2">
-            <button className="flex gap-3 items-center font-bold">
+            <button className="group flex gap-3 items-center font-bold">
               Get this template
               <span className="bg-black rounded-full px-2 py-2">
-                <TfiArrowTopRight className="text-white" />
+                <CgArrowTopRight size={20} className="text-white transition-transform duration-300 group-hover:rotate-45" />
               </span>
             </button>
           </div>

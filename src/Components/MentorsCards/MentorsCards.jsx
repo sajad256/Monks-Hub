@@ -1,6 +1,7 @@
 import { cardsDATA } from "./MentorsCardsDATA";
 import { useState, useEffect } from "react";
 import { TfiArrowTopRight } from "react-icons/tfi";
+import { CgArrowTopRight } from "react-icons/cg";
 
 export default function MentorsCards() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -74,10 +75,13 @@ export default function MentorsCards() {
         </div>
       </div>
       <div className="btn flex justify-center items-center h-36">
-        <button className="flex items-center gap-3 border px-3 py-2 rounded-full bg-[#009D77] text-white font-bold hover: hover:bg-black  duration-500">
+        <button className="group flex items-center gap-3 border px-3 py-2 rounded-full bg-[#009D77] text-white font-bold hover: hover:bg-black  duration-500">
           Views All Mentors
           <span className="mt-1 border px-2 py-2 rounded-full text-black bg-white">
-            <TfiArrowTopRight />
+            <CgArrowTopRight
+              size={20}
+              className="transition-transform duration-300 group-hover:rotate-45"
+            />
           </span>
         </button>
       </div>

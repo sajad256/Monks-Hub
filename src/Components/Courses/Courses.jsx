@@ -5,6 +5,7 @@ import { buttonData } from "./CoursesDATA";
 import { IoTimeOutline } from "react-icons/io5";
 import { TiDocumentText } from "react-icons/ti";
 import { FaArrowRight } from "react-icons/fa6";
+import { CgArrowTopRight } from "react-icons/cg";
 import ExpolreOurAllCourses from "./Explore Our All Courses/ExpolreOurAllCourses";
 import IndustryTalent from "./IndustryTalent/IndustryTalent";
 import GraduateKeyTakeaways from "../GraduateKeyTakeaways/GraduateKeyTakeaways";
@@ -84,10 +85,17 @@ export default function Courses() {
                 <h1 className="text-3xl font-bold text-[#009D77] mb-2">
                   {cardsData[0].price}
                 </h1>
-                <div className="border-1 border-black px-2 py-2 mb-2 rounded-full">
-                  <button className="flex items-center gap-2">
-                    View Details
-                    <FaArrowRight className="mt-1" />
+                <div className="border-1 border-black px-3 py-2 mb-2 rounded-full hover: hover:bg-[#009D77]  duration-500 hover:text-white">
+                  <button className="group flex items-center h-8 gap-2">
+                    <span className="text-sm">View Details</span>
+
+                    {/* Circle Button */}
+                    <span className="z-10 inline-block items-center justify-center p-2 rounded-full border bg-black text-white transition-colors duration-300 hover:bg-white hover:text-black cursor-pointer">
+                      <CgArrowTopRight
+                        size={20}
+                        className="transform transition-transform duration-300 group-hover:rotate-45"
+                      />
+                    </span>
                   </button>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { CgArrowTopRight } from "react-icons/cg";
 import { cardsData } from "./IndustryTalentDATA";
 export default function IndustryTalent() {
   return (
@@ -11,10 +12,13 @@ export default function IndustryTalent() {
             Learn from the Best Talent in the Industry
           </h1>
           <div className="btn mt-3 ">
-            <button className="bg-white flex items-center justify-between gap-3 text-center py-2 px-3 rounded-full">
+            <button className="group bg-white flex items-center justify-between gap-3 text-center py-2 px-3 rounded-full">
               View All Mentors
               <span className="mt-1 border bg-black text-white py-2 px-2 rounded-full">
-                <FaArrowRightLong />
+                <CgArrowTopRight
+                  size={20}
+                  className="transition-transform duration-300 group-hover:rotate-45"
+                />
               </span>
             </button>
           </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { TfiArrowTopRight } from "react-icons/tfi";
+import { CgArrowTopRight } from "react-icons/cg";
 import { cardsDATA } from "./CareerHeroDATA";
 
 export default function CareerHero() {
@@ -11,10 +12,13 @@ export default function CareerHero() {
           Empower Your Journey with Expert Career Insights
         </h1>
         <div className="btn mt-4 md:ms-32">
-          <button className="flex items-center gap-3  border px-3 py-2 rounded-full lg:w-52 bg-[#009D77] text-white font-bold hover: hover:bg-black duration-500">
+          <button className="group flex items-center gap-3  border px-3 py-2 rounded-full lg:w-52 bg-[#009D77] text-white font-bold hover: hover:bg-black duration-500">
             View All Blogs
             <span className="mt-1 border px-2 py-2 rounded-full text-black bg-white ">
-              <TfiArrowTopRight size={20} />
+              <CgArrowTopRight
+                className="transition-transform duration-300 group-hover:rotate-45"
+                size={20}
+              />
             </span>
           </button>
         </div>
