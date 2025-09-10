@@ -15,20 +15,6 @@ export default function Cards() {
   return (
     <div className="p-4 flex flex-col items-center w-full">
       {/* Navigation buttons */}
-      <div className="flex h-10 container items-center mt-3 gap-3 justify-start xl:justify-center">
-        <button
-          ref={prevRef}
-          className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 transition"
-        >
-          <FaArrowLeft />
-        </button>
-        <button
-          ref={nextRef}
-          className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 transition"
-        >
-          <FaArrowRight />
-        </button>
-      </div>
 
       {/* Swiper */}
       <Swiper
@@ -70,6 +56,21 @@ export default function Cards() {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <div className="flex h-10 container items-center mt-3 gap-3 justify-start xl:justify-center">
+        <button
+          ref={prevRef}
+          className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 transition"
+        >
+          <FaArrowLeft />
+        </button>
+        <button
+          ref={nextRef}
+          className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 transition"
+        >
+          <FaArrowRight />
+        </button>
+      </div>
 
       {/* Custom pagination outside the Swiper */}
       <div ref={paginationRef} className="mt-6 flex justify-center gap-1"></div>

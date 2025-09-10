@@ -63,8 +63,8 @@ export default function Cards() {
                   <h1 className="text-3xl font-bold text-[#009D77] mb-2">
                     {cardsData[0].price}
                   </h1>
-                  <div className="border-1 border-black px-2 py-2 mb-2 rounded-full">
-                    <button className="flex items-center gap-2">
+                  <div className="border-1 border-black px-2 py-2 mb-2 rounded-full hover: hover:bg-[#009D77]  duration-500 hover:text-white">
+                    <button className="flex items-center gap-2 ">
                       View Details
                       <FaArrowRight className="mt-1" />
                     </button>
@@ -123,11 +123,11 @@ export default function Cards() {
       <div className="last-btn mt-4 flex justify-center ">
         <button
           type="button"
-          className="group flex items-center gap-3 border border-black px-4 py-2 rounded-full bg-black text-white hover:bg-green-500 transition-colors"
+          className=" flex items-center gap-3 border border-black px-4 py-2 rounded-full bg-gray-950 text-white hover: hover:bg-[#009D77] duration-500"
         >
           View All Courses
           <span className="flex items-center justify-center border border-white w-8 h-8 rounded-full bg-white text-black ">
-           <TfiArrowTopRight />
+            <TfiArrowTopRight />
           </span>
         </button>
       </div>

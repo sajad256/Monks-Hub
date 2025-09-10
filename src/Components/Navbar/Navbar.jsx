@@ -6,6 +6,7 @@ import { TfiArrowTopRight } from "react-icons/tfi";
 import { NavbarData } from "./NavbarDATA";
 import { Link } from "react-router";
 import { NavLink } from "react-router-dom";
+import { FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +39,7 @@ export default function Navbar() {
 
                   {/* Dropdown */}
                   <div
-                    className={`xl:absolute xl:top-6 xl:-left-16 xl:right-96 h-52 w-44 transform transition-all duration-300 ease-out ${
+                    className={`xl:absolute xl:top-6 xl:-left-16 xl:right-96 h-52 w-44 transform transition-all duration-500 ease-out ${
                       dropdown
                         ? "opacity-100 translate-y-0"
                         : "opacity-0 -translate-y-3 pointer-events-none"
@@ -71,7 +72,7 @@ export default function Navbar() {
                   <Link to="/mentor"> {data.mentors}</Link>
                 </li>
                 <li className=" cursor-pointer hover:text-[#EA4C89]">
-                  {data.blog}
+                  <Link to="/blog">{data.blog}</Link>
                 </li>
                 <li className=" cursor-pointer hover:text-[#EA4C89]">
                   {data.aboutUs}
@@ -112,7 +113,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`absolute top-24 left-4 md:top-28 w-11/12 rounded-3xl  bg-white shadow-md xl:hidden transform transition-all duration-500 ease-in-out ${
+          className={`absolute z-50 top-24 left-4 md:top-28 w-11/12 rounded-3xl  bg-white shadow-md border-2 border-gray-300 xl:hidden transform transition-all duration-300 ease-in-out ${
             isOpen
               ? "translate-y-0 opacity-100"
               : "-translate-y-5 opacity-0 pointer-events-none"
@@ -123,7 +124,7 @@ export default function Navbar() {
               key={index}
               className="flex flex-col container ms-3 gap-3 mt-3 font-bold"
             >
-              <li className="hover:text-[#EA4C89] cursor-pointer text-[#EA4C89]">
+              <li className="hover:text-[#EA4C89] cursor-pointer">
                 <Link to="/"> {data.home}</Link>
               </li>
               <li className="hover:text-[#EA4C89] cursor-pointer">
@@ -139,7 +140,7 @@ export default function Navbar() {
                 <Link to="/mentor"> {data.mentors}</Link>
               </li>
               <li className="hover:text-[#EA4C89] cursor-pointer">
-                {data.blog}
+                <Link to="/blog">{data.blog}</Link>
               </li>
               <li className="hover:text-[#EA4C89] cursor-pointer">
                 {data.aboutUs}

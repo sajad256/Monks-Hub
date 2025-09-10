@@ -13,6 +13,7 @@ import DreamCareerHero from "./Components/DreamCareerHero/DreamCareerHero";
 import Footer from "./Components/Footer/Footer";
 import Courses from "./Components/Courses/Courses";
 import Mentors from "./Components/Mentors Components/Mentors";
+import Blog from "./Components/Blog Components/Blog";
 export default function App() {
   return (
     <BrowserRouter>
@@ -38,6 +39,7 @@ export default function App() {
         <Route path="/" />
         <Route path="/courses" element={<Courses />} />
         <Route path="/mentor" element={<Mentors />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
     </BrowserRouter>
   );
