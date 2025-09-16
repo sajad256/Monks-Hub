@@ -5,9 +5,8 @@ import { IoIosSearch } from "react-icons/io";
 export default function Hero() {
   return (
     <>
-     
       <section className="bg-[url('/bg.png')] bg-center bg-cover">
-       <Navbar />
+        <Navbar />
         {/* Information */}
         <div className="Main-for-learn-from flex justify-center items-center h-32">
           <div className="learn-from-top-expert border flex justify-center w-72 px-2 py-2 rounded-full">
@@ -22,7 +21,7 @@ export default function Hero() {
             </h1>
           </div>
         </div>
-        {/* Building Futures Together By Empowering Minds */} 
+        {/* Building Futures Together By Empowering Minds */}
         <div className="text-center container">
           <h1 className="font-bold text-5xl leading-snug">
             Building Future Together By Empowering Minds
