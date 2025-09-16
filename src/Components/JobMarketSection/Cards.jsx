@@ -5,7 +5,7 @@ import { TiDocumentText } from "react-icons/ti";
 import { FaArrowRight } from "react-icons/fa6";
 import { TfiArrowTopRight } from "react-icons/tfi";
 import { CgArrowTopRight } from "react-icons/cg";
-
+import { Link } from "react-router-dom";
 export default function Cards() {
   return (
     <>
@@ -65,17 +65,19 @@ export default function Cards() {
                     {cardsData[0].price}
                   </h1>
                   <div className="border-1 border-black px-3 py-2 mb-2 rounded-full hover: hover:bg-[#009D77]  duration-500 hover:text-white">
-                    <button className="group flex items-center h-8 gap-2">
-                      <span className="text-sm">View Details</span>
+                    <Link to="/Coursesdetails">
+                      <button className="group flex items-center h-8 gap-2">
+                        <span className="text-sm">View Details</span>
 
-                      {/* Circle Button */}
-                      <span className="z-10 inline-block items-center justify-center p-2 rounded-full border bg-black text-white transition-colors duration-300 hover:bg-white hover:text-black cursor-pointer">
-                        <CgArrowTopRight
-                          size={20}
-                          className="transform transition-transform duration-300 group-hover:rotate-45"
-                        />
-                      </span>
-                    </button>
+                        {/* Circle Button */}
+                        <span className="z-10 inline-block items-center justify-center p-2 rounded-full border bg-black text-white transition-colors duration-300 hover:bg-white hover:text-black cursor-pointer">
+                          <CgArrowTopRight
+                            size={20}
+                            className="transform transition-transform duration-300 group-hover:rotate-45"
+                          />
+                        </span>
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -86,45 +88,50 @@ export default function Cards() {
         {/* Other cards in grid */}
         <div className="md:justify-items-center lg:grid lg:grid-cols-2 lg:justify-items-center xl:grid-cols-3">
           {cardsData.slice(1).map((data, index, arr) => (
-            <div
-              key={index}
-              className={`card-1 border mt-3 rounded-xl md:w-96 ${
-                index === arr.length - 1 ? "xl:hidden" : ""
-              }`}
-            >
-              <div className="img container flex justify-center mt-3">
-                <img
-                  className="rounded-3xl w-64 lg:w-96 lg:mb-5"
-                  src={data.img}
-                  alt={data.title}
-                />
-              </div>
-              <div>
-                <div className="development-and-populer container flex justify-between mt-4">
-                  <button className="btn p-2 bg-[#F0F0F0] font-bold rounded-xl">
-                    {data.category || data.marketing || data.Ui || data.develo}
-                  </button>
-                  <div className="text-2xl font-bold text-[#009D77] mt-1">
-                    {data.price}
+            <Link to="/Coursesdetails">
+              <div
+                key={index}
+                className={`card-1 border mt-3 rounded-xl md:w-96 ${
+                  index === arr.length - 1 ? "xl:hidden" : ""
+                }`}
+              >
+                <div className="img container flex justify-center mt-3">
+                  <img
+                    className="rounded-3xl w-64 lg:w-96 lg:mb-5"
+                    src={data.img}
+                    alt={data.title}
+                  />
+                </div>
+                <div>
+                  <div className="development-and-populer container flex justify-between mt-4">
+                    <button className="btn p-2 bg-[#F0F0F0] font-bold rounded-xl">
+                      {data.category ||
+                        data.marketing ||
+                        data.Ui ||
+                        data.develo}
+                    </button>
+                    <div className="text-2xl font-bold text-[#009D77] mt-1">
+                      {data.price}
+                    </div>
                   </div>
+                  <div className="info container">
+                    <h1 className="font-bold text-2xl mt-3">{data.title}</h1>
+                    {data.detail && <p className="mt-3">{data.detail}</p>}
+                  </div>
+                  <div className="houre-and-lecture container flex justify-between mt-3">
+                    <p className="flex items-center gap-1">
+                      <IoTimeOutline />
+                      {data.houre}
+                    </p>
+                    <p className="flex items-center gap-1">
+                      <TiDocumentText />
+                      {data.lecture}
+                    </p>
+                  </div>
+                  <div className="container border w-64 mt-3"></div>
                 </div>
-                <div className="info container">
-                  <h1 className="font-bold text-2xl mt-3">{data.title}</h1>
-                  {data.detail && <p className="mt-3">{data.detail}</p>}
-                </div>
-                <div className="houre-and-lecture container flex justify-between mt-3">
-                  <p className="flex items-center gap-1">
-                    <IoTimeOutline />
-                    {data.houre}
-                  </p>
-                  <p className="flex items-center gap-1">
-                    <TiDocumentText />
-                    {data.lecture}
-                  </p>
-                </div>
-                <div className="container border w-64 mt-3"></div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -14,6 +14,8 @@ import Footer from "./Components/Footer/Footer";
 import Courses from "./Components/Courses/Courses";
 import Mentors from "./Components/Mentors Components/Mentors";
 import Blog from "./Components/Blog Components/Blog";
+import Coursesdetails from "./Components/Courses Detail's/Coursesdetails";
+import MentorDetails from "./Components/Mentor Details/MentorDetails";
 export default function App() {
   return (
     <BrowserRouter>
@@ -40,6 +42,8 @@ export default function App() {
         <Route path="/courses" element={<Courses />} />
         <Route path="/mentor" element={<Mentors />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/coursesdetails" element={<Coursesdetails />} />
+        <Route path="/MentorDetails" element={<MentorDetails />} />
       </Routes>
     </BrowserRouter>
   );

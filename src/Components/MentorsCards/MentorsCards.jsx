@@ -2,6 +2,7 @@ import { cardsDATA } from "./MentorsCardsDATA";
 import { useState, useEffect } from "react";
 import { TfiArrowTopRight } from "react-icons/tfi";
 import { CgArrowTopRight } from "react-icons/cg";
+import { Link } from "react-router";
 
 export default function MentorsCards() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -44,35 +45,41 @@ export default function MentorsCards() {
       </div>
 
       {/* Mentors Cards */}
-      <div className="main-mentors-cards flex justify-center items-center container mt-10">
-        <div className={`grid gap-8 w-full ${getGridCols()}`}>
-          {cardsDATA.slice(0, visible).map((data, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-md flex flex-col items-center p-4"
-            >
-              {/* Image */}
-              <img
-                src={data.img}
-                alt={data.title}
-                className="w-20 h-20 sm:w-40 sm:h-40 bg-[#BDF1E5] rounded-full"
-              />
-              {/* Title & Job */}
-              <div className="text-center mt-4">
-                <h1 className="text-xl font-semibold">{data.title}</h1>
-                <h6 className="text-gray-500">{data.job}</h6>
+      <div className="main-mentors-cards flex justify-center items-center container mt-10 ">
+        <Link to="/MentorDetails">
+          <div className={`grid gap-8 w-full  ${getGridCols()}`}>
+            {cardsDATA.slice(0, visible).map((data, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl flex flex-col items-center p-4 border border-transparent hover:!border-green-800 transition-colors duration-500 hover:shadow-[0_-2px_6px_0_rgba(34,197,94,0.3),0_2px_6px_0_rgba(34,197,94,0.3),-2px_0_6px_0_rgba(0,0,0,0.25),2px_0_6px_0_rgba(0,0,0,0.25)]"
+              >
+                {/* Image */}
+                <img
+                  src={data.img}
+                  alt={data.title}
+                  className="w-20 h-20 sm:w-40 sm:h-40 bg-[#BDF1E5] rounded-full"
+                />
+                {/* Title & Job */}
+                <div className="text-center mt-4">
+                  <h1 className="text-xl font-semibold">{data.title}</h1>
+                  <h6 className="text-gray-500">{data.job}</h6>
+                </div>
+                {/* Buttons */}
+                <div className="flex gap-2 mt-4">
+                  <h1 className="border px-2 py-2 rounded-full">
+                    {data.figma}
+                  </h1>
+                  <h1 className="border px-2 py-2 rounded-full">
+                    {data.wordpress}
+                  </h1>
+                  <h1 className="border px-2 py-2 rounded-full">
+                    {data.notion}
+                  </h1>
+                </div>
               </div>
-              {/* Buttons */}
-              <div className="flex gap-2 mt-4">
-                <h1 className="border px-2 py-2 rounded-full">{data.figma}</h1>
-                <h1 className="border px-2 py-2 rounded-full">
-                  {data.wordpress}
-                </h1>
-                <h1 className="border px-2 py-2 rounded-full">{data.notion}</h1>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </Link>
       </div>
       <div className="btn flex justify-center items-center h-36">
         <button className="group flex items-center gap-3 border px-3 py-2 rounded-full bg-[#009D77] text-white font-bold hover: hover:bg-black  duration-500">

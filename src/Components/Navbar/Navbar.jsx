@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="container flex justify-between items-center h-16 md:justify-around md:h-24 xl:justify-between relative bg-[url('bg.png')] bg-cover bg-center bg-no-repeat">
+      <nav className="container flex justify-between items-center h-16 md:justify-around md:h-24 xl:justify-between relative bg-none">
         {/* Logo */}
         <div className="logo">
           <img className="w-40" src={logo} alt="logo" />
