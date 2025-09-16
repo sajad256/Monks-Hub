@@ -2,6 +2,7 @@ import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { CgArrowTopRight } from "react-icons/cg";
 import { cardsData } from "./IndustryTalentDATA";
+import { Link } from "react-router";
 export default function IndustryTalent() {
   return (
     <>
@@ -28,32 +29,34 @@ export default function IndustryTalent() {
           {cardsData.map((data, index) => {
             return (
               <div>
-                <div
-                  className={`card-1 border border-white container rounded-t-full rounded-b-full h-screen w-11/12 bg-[#F6CCDA] flex flex-col justify-between items-center md:w-72 lg:h-full ${
-                    index === 1
-                      ? "xl:mt-20 bg-[#F5E6BB]"
-                      : index === 3
-                      ? "xl:mt-20 bg-[#6D799F]"
-                      : index === 2
-                      ? "bg-[#8B8DD6]"
-                      : ""
-                  }`}
-                >
-                  {/* Top info */}
-                  <div className="card-top-info flex flex-col justify-center items-center mt-10 text-black">
-                    <h1 className="text-xl font-bold">{data.name}</h1>
-                    <p className="text-sm">{data.job}</p>
-                  </div>
+                <Link to="/MentorDetails">
+                  <div
+                    className={`card-1 border border-white container rounded-t-full rounded-b-full h-screen w-11/12 bg-[#F6CCDA] flex flex-col justify-between items-center md:w-72 lg:h-full ${
+                      index === 1
+                        ? "xl:mt-20 bg-[#F5E6BB]"
+                        : index === 3
+                        ? "xl:mt-20 bg-[#6D799F]"
+                        : index === 2
+                        ? "bg-[#8B8DD6]"
+                        : ""
+                    }`}
+                  >
+                    {/* Top info */}
+                    <div className="card-top-info flex flex-col justify-center items-center mt-10 text-black">
+                      <h1 className="text-xl font-bold">{data.name}</h1>
+                      <p className="text-sm">{data.job}</p>
+                    </div>
 
-                  {/* Image at bottom center */}
-                  <div className="card-img">
-                    <img
-                      className="rounded-full w-96 h-96 object-cover mx-auto relative -top-3"
-                      src={data.img}
-                      alt=""
-                    />
+                    {/* Image at bottom center */}
+                    <div className="card-img">
+                      <img
+                        className="rounded-full w-96 h-96 object-cover mx-auto relative -top-3"
+                        src={data.img}
+                        alt=""
+                      />
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             );
           })}
