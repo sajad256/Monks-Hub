@@ -3,7 +3,7 @@ import imges from "../../assets/CardsIMG/CardsIMGJS";
 export const mentorsData = [
   // Card 1
   {
-    img: imges.img1,
+    img: imges.sajad3,
     name: "Sajad Danish",
     job: "React Developer",
     link: "/MentorDetails",
