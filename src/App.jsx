@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
-import Cards from "./Components/Cards/Cards";
 import MentorsCards from "./Components/MentorsCards/MentorsCards";
 import JobMarketSection from "./Components/JobMarketSection/JobMarketSection";
 import TakeYourExpertiseToTheNextLevel from "./Components/TakeYourExpertiseToTheNextLevel/TakeYourExpertiseToTheNextLevel";
@@ -16,9 +15,12 @@ import Mentors from "./Components/Mentors Components/Mentors";
 import Blog from "./Components/Blog Components/Blog";
 import Coursesdetails from "./Components/Courses Detail's/Coursesdetails";
 import MentorDetails from "./Components/Mentor Details/MentorDetails";
+import ScrollToTop from "./ScrollToTop"; // 👈 add this
+
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop /> {/* 👈 this will reset scroll on every route change */}
       <Routes>
         <Route
           path="/"
@@ -36,9 +38,6 @@ export default function App() {
             </>
           }
         />
-
-        {/* Courses Page */}
-        <Route path="/" />
         <Route path="/courses" element={<Courses />} />
         <Route path="/mentor" element={<Mentors />} />
         <Route path="/blog" element={<Blog />} />
