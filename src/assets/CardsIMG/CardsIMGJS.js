@@ -7,7 +7,7 @@ import img6 from "../CardsIMG/img 6.png";
 import sajad2 from "../CardsIMG/sajad2.jpg";
 import tahseen from "../CardsIMG/tahseen.jpg";
 import raheb from "../CardsIMG/raheb.png";
-import saidshah from "../CardsIMG/Saidshah.png";
+import saidshah from "../CardsIMG/saidshah.png";
 
 const imges = {
   img1,
