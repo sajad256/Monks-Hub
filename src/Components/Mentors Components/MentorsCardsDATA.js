@@ -6,24 +6,28 @@ export const mentorsData = [
     img: imges.img1,
     name: "Sajad Danish",
     job: "React Developer",
+    link: "/MentorDetails",
   },
   // Card 2
   {
     img: imges.img2,
     name: "Tahseenullah Safi",
     job: "Back-end Developer",
+    link: "/Tahseen",
   },
   // Card 3
   {
     img: imges.img3,
     name: "Raheb Kharokhil",
     job: "Full Stuck Developer",
+    link: "/Raheb",
   },
   // Card 4
   {
     img: imges.img4,
-    name: "Abdullah Safi",
+    name: "Said Shah Ahmadi",
     job: "Front-End Developer",
+    link: "/Saidshah",
   },
   // Card 5
   {
@@ -40,7 +44,7 @@ export const mentorsData = [
   // Card 7
   {
     img: imges.img3,
-    name: "Said Shah Ahmadi",
+    name: "Abdullah Safi",
     job: "Back-End Developer",
   },
   // Card 8

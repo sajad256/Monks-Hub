@@ -13,7 +13,7 @@ export default function MentorsCards() {
       <div className=" main-for-cards container mt-10 lg:grid lg:grid-cols-3 xl:grid-cols-4">
         {mentorsData.map((data, index) => {
           return (
-            <Link to="/MentorDetails">
+            <Link to={data.link}>
               <div className="container md:flex md:justify-center">
                 <div
                   className={`card  rounded-xl mt-4 md:w-80 border border-transparent hover:!border-green-800 transition-colors duration-500 hover:shadow-[0_-2px_6px_0_rgba(34,197,94,0.3),0_2px_6px_0_rgba(34,197,94,0.3),-2px_0_6px_0_rgba(0,0,0,0.25),2px_0_6px_0_rgba(0,0,0,0.25)] ${
