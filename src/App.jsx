@@ -15,12 +15,16 @@ import Mentors from "./Components/Mentors Components/Mentors";
 import Blog from "./Components/Blog Components/Blog";
 import Coursesdetails from "./Components/Courses Detail's/Coursesdetails";
 import MentorDetails from "./Components/Mentor Details/MentorDetails";
-import ScrollToTop from "./ScrollToTop"; // 👈 add this
+import Tahseen from "./Components/Mentor Details/Tahseenullah Safi/Tahseen.jsx";
+
+import ScrollToTop from "./ScrollToTop";
+import Raheb from "./Components/Mentor Details/Raheb Khan/Raheb.jsx";
+import Saidshah from "./Components/Mentor Details/Said Shah Ahmadi/Saidshah.jsx";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop /> {/* 👈 this will reset scroll on every route change */}
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"
@@ -43,6 +47,9 @@ export default function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/coursesdetails" element={<Coursesdetails />} />
         <Route path="/MentorDetails" element={<MentorDetails />} />
+        <Route path="/Tahseen" element={<Tahseen />} />
+        <Route path="/Raheb" element={<Raheb />} />
+        <Route path="/Saidshah" element={<Saidshah />} />
       </Routes>
     </BrowserRouter>
   );

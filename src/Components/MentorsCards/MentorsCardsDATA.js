@@ -7,7 +7,8 @@ export const cardsDATA = [
     figma: "Figma",
     wordpress: "Wordpress",
     notion: "Notion",
-    img: imges.img1,
+    img: imges.sajad2,
+    link: "/MentorDetails",
   },
   {
     title: "Tahseen Safi",
@@ -15,23 +16,26 @@ export const cardsDATA = [
     figma: "Figma",
     wordpress: "Wordpress",
     notion: "Notion",
-    img: imges.img2,
+    img: imges.tahseen,
+    link: "/Tahseen",
   },
   {
-    title: "Khitabullah Omarzai",
+    title: "Raheb Khan",
     job: "Back-End",
     figma: "Figma",
     wordpress: "Wordpress",
     notion: "Notion",
-    img: imges.img3,
+    img: imges.raheb,
+    link: "/Raheb"
   },
   {
-    title: "Ferdous Sharifi",
+    title: "Said Shah Ahmadi",
     job: "Full-Stack",
     figma: "Figma",
     wordpress: "Wordpress",
     notion: "Notion",
-    img: imges.img4,
+    img: imges.saidshah,
+    link: "/Saidshah"
   },
   {
     title: "Abdullah Safi",
@@ -42,7 +46,7 @@ export const cardsDATA = [
     img: imges.img5,
   },
   {
-    title: "Raheb Khan",
+    title: "khitabullah Omarzai",
     job: "Project Manager",
     figma: "Figma",
     wordpress: "Wordpress",
@@ -58,8 +62,8 @@ export const cardsDATA = [
     img: imges.img1,
   },
   {
-    title: "Said Shah Ahmadi",
-    job: "Web Developer",
+    title: "Ferdous Sharifi",
+    job: "Front-End",
     figma: "Figma",
     wordpress: "Wordpress",
     notion: "Notion",

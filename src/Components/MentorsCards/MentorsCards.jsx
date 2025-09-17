@@ -45,14 +45,24 @@ export default function MentorsCards() {
       </div>
 
       {/* Mentors Cards */}
-      <div className="main-mentors-cards flex justify-center items-center container mt-10 ">
-        <Link to="/MentorDetails">
-          <div className={`grid gap-8 w-full  ${getGridCols()}`}>
-            {cardsDATA.slice(0, visible).map((data, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl flex flex-col items-center p-4 border border-transparent hover:!border-green-800 transition-colors duration-500 hover:shadow-[0_-2px_6px_0_rgba(34,197,94,0.3),0_2px_6px_0_rgba(34,197,94,0.3),-2px_0_6px_0_rgba(0,0,0,0.25),2px_0_6px_0_rgba(0,0,0,0.25)]"
-              >
+      <div className="main-mentors-cards flex justify-center items-center container mt-10">
+        <div className={`grid gap-8 w-full ${getGridCols()}`}>
+          {cardsDATA.slice(0, visible).map((data, index) => (
+            <Link
+              key={index}
+              to={
+                index === 0
+                  ? "/MentorDetails"
+                  : index === 1
+                  ? "/tahseen"
+                  : index === 2
+                  ? "/Raheb"
+                  : index === 3
+                  ? "/Saidshah"
+                  : ""
+              } // 👈 only 2nd card goes to Tahseen
+            >
+              <div className="bg-white rounded-xl flex flex-col items-center p-4 border border-transparent hover:!border-green-800 transition-colors duration-500 hover:shadow-[0_-2px_6px_0_rgba(34,197,94,0.3),0_2px_6px_0_rgba(34,197,94,0.3),-2px_0_6px_0_rgba(0,0,0,0.25),2px_0_6px_0_rgba(0,0,0,0.25)]">
                 {/* Image */}
                 <img
                   src={data.img}
@@ -77,10 +87,11 @@ export default function MentorsCards() {
                   </h1>
                 </div>
               </div>
-            ))}
-          </div>
-        </Link>
+            </Link>
+          ))}
+        </div>
       </div>
+
       <div className="btn flex justify-center items-center h-36">
         <button className="group flex items-center gap-3 border px-3 py-2 rounded-full bg-[#009D77] text-white font-bold hover: hover:bg-black  duration-500">
           Views All Mentors
