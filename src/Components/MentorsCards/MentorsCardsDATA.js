@@ -43,7 +43,8 @@ export const cardsDATA = [
     figma: "Figma",
     wordpress: "Wordpress",
     notion: "Notion",
-    img: imges.img5,
+    img: imges.abdullah,
+    link: "/Abdullah"
   },
   {
     title: "khitabullah Omarzai",

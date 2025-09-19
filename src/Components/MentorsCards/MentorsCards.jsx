@@ -59,6 +59,8 @@ export default function MentorsCards() {
                   ? "/Raheb"
                   : index === 3
                   ? "/Saidshah"
+                  : index === 4
+                  ? "/Abdullah"
                   : ""
               } // 👈 only 2nd card goes to Tahseen
             >

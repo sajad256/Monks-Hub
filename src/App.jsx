@@ -20,6 +20,7 @@ import Tahseen from "./Components/Mentor Details/Tahseenullah Safi/Tahseen.jsx";
 import ScrollToTop from "./ScrollToTop";
 import Raheb from "./Components/Mentor Details/Raheb Khan/Raheb.jsx";
 import Saidshah from "./Components/Mentor Details/Said Shah Ahmadi/Saidshah.jsx";
+import Abdullah from "./Components/Mentor Details/Abdullah Safi/Abdullah.jsx";
 
 export default function App() {
   return (
@@ -50,6 +51,7 @@ export default function App() {
         <Route path="/Tahseen" element={<Tahseen />} />
         <Route path="/Raheb" element={<Raheb />} />
         <Route path="/Saidshah" element={<Saidshah />} />
+        <Route path="/Abdullah" element={<Abdullah />} />
       </Routes>
     </BrowserRouter>
   );

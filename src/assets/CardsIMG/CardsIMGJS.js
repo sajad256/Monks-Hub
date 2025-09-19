@@ -9,6 +9,7 @@ import sajad3 from "../CardsIMG/sajad3.png";
 import tahseen from "../CardsIMG/tahseen.jpg";
 import raheb from "../CardsIMG/raheb.png";
 import saidshah from "../CardsIMG/saidshah.png";
+import abdullah from "../CardsIMG/abdullah.jpg";
 
 const imges = {
   img1,
@@ -22,6 +23,7 @@ const imges = {
   tahseen,
   raheb,
   saidshah,
+  abdullah,
 };
 
 export default imges;
