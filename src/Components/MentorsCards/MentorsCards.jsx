@@ -50,19 +50,7 @@ export default function MentorsCards() {
           {cardsDATA.slice(0, visible).map((data, index) => (
             <Link
               key={index}
-              to={
-                index === 0
-                  ? "/MentorDetails"
-                  : index === 1
-                  ? "/tahseen"
-                  : index === 2
-                  ? "/Raheb"
-                  : index === 3
-                  ? "/Saidshah"
-                  : index === 4
-                  ? "/Abdullah"
-                  : ""
-              } // 👈 only 2nd card goes to Tahseen
+              to={data.link} // 👈 only 2nd card goes to Tahseen
             >
               <div className="bg-white rounded-xl flex flex-col items-center p-4 border border-transparent hover:!border-green-800 transition-colors duration-500 hover:shadow-[0_-2px_6px_0_rgba(34,197,94,0.3),0_2px_6px_0_rgba(34,197,94,0.3),-2px_0_6px_0_rgba(0,0,0,0.25),2px_0_6px_0_rgba(0,0,0,0.25)]">
                 {/* Image */}

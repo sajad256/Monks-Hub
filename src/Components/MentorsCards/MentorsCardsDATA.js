@@ -26,7 +26,7 @@ export const cardsDATA = [
     wordpress: "Wordpress",
     notion: "Notion",
     img: imges.raheb,
-    link: "/Raheb"
+    link: "/Raheb",
   },
   {
     title: "Said Shah Ahmadi",
@@ -35,7 +35,7 @@ export const cardsDATA = [
     wordpress: "Wordpress",
     notion: "Notion",
     img: imges.saidshah,
-    link: "/Saidshah"
+    link: "/Saidshah",
   },
   {
     title: "Abdullah Safi",
@@ -44,7 +44,7 @@ export const cardsDATA = [
     wordpress: "Wordpress",
     notion: "Notion",
     img: imges.abdullah,
-    link: "/Abdullah"
+    link: "/Abdullah",
   },
   {
     title: "khitabullah Omarzai",
@@ -52,7 +52,8 @@ export const cardsDATA = [
     figma: "Figma",
     wordpress: "Wordpress",
     notion: "Notion",
-    img: imges.img6,
+    img: imges.khitab,
+    link: "/Khitab",
   },
   {
     title: "Jahanziab Safi",
