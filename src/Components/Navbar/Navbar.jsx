@@ -76,7 +76,7 @@ export default function Navbar() {
                   <Link to="/blog">{data.blog}</Link>
                 </li>
                 <li className=" cursor-pointer hover:text-[#EA4C89]">
-                  {data.aboutUs}
+                  <Link to="/AboutUs"> {data.aboutUs}</Link>
                 </li>
                 <li className=" cursor-pointer hover:text-[#EA4C89]">
                   {data.contact}
@@ -92,7 +92,10 @@ export default function Navbar() {
             <button className="group flex gap-3 items-center font-bold">
               Get this template
               <span className="bg-black rounded-full px-2 py-2">
-                <CgArrowTopRight size={20} className="text-white transition-transform duration-300 group-hover:rotate-45" />
+                <CgArrowTopRight
+                  size={20}
+                  className="text-white transition-transform duration-300 group-hover:rotate-45"
+                />
               </span>
             </button>
           </div>
