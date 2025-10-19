@@ -10,12 +10,10 @@ import "swiper/css/pagination";
 export default function Cards() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-  const paginationRef = useRef(null); // <-- custom pagination container
+  const paginationRef = useRef(null);
 
   return (
     <div className="p-4 flex flex-col items-center w-full">
-      {/* Navigation buttons */}
-
       {/* Swiper */}
       <Swiper
         modules={[Navigation, Pagination]}
@@ -42,7 +40,7 @@ export default function Cards() {
           1024: { slidesPerView: 3 },
           1280: { slidesPerView: 4 },
         }}
-        className="w-full"
+        className="w-full max-w-[1280px]"
       >
         {Cardsdata.map((c, i) => (
           <SwiperSlide key={i}>
@@ -57,7 +55,8 @@ export default function Cards() {
         ))}
       </Swiper>
 
-      <div className="flex h-10 container items-center mt-3 gap-3 justify-start xl:justify-center">
+      {/* Navigation buttons */}
+      <div className="flex items-center gap-3 mt-3 justify-center">
         <button
           ref={prevRef}
           className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 transition"
@@ -72,7 +71,7 @@ export default function Cards() {
         </button>
       </div>
 
-      {/* Custom pagination outside the Swiper */}
+      {/* Custom pagination */}
       <div ref={paginationRef} className="mt-6 flex justify-center gap-1"></div>
     </div>
   );

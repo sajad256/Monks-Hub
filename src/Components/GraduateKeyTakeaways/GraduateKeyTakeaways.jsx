@@ -14,21 +14,18 @@ export default function GraduateKeyTakeaways() {
   const paginationRef = useRef(null); // <-- custom pagination container
 
   return (
-    <div className="mt-20">
-      {/* Title */}
-      <h1 className="text-center text-4xl font-bold mb-6">
-        Key Takeaways from Successful Graduate Experiences
-      </h1>
+    <div className="flex justify-center w-full mt-20">
+      <div className="w-full max-w-[1280px] px-4">
+        {/* Title */}
+        <h1 className="text-center text-4xl font-bold mb-6">
+          Key Takeaways from Successful Graduate Experiences
+        </h1>
 
-      {/* Swiper Slider */}
-      <div className="px-4">
+        {/* Swiper Slider */}
         <Swiper
           modules={[Navigation, Pagination]}
           navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
-          pagination={{
-            clickable: true,
-            el: paginationRef.current, // <-- point to custom element
-          }}
+          pagination={{ clickable: true, el: paginationRef.current }}
           onSwiper={(swiper) => {
             setTimeout(() => {
               swiper.params.navigation.prevEl = prevRef.current;
